@@ -1,0 +1,3 @@
+# Pliki z tego repo trafiaja na Raspberry Pi (cloud-init, bash, python).
+# CRLF psuje shebang i parsowanie user-data, wiec robocza kopia tez ma miec LF.
+* text=auto eol=lf

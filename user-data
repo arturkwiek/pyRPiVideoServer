@@ -1,0 +1,22 @@
+#cloud-config
+
+hostname: raspberrypi
+manage_etc_hosts: true
+
+# Logowanie hasłem przez SSH ma być włączone
+ssh_pwauth: true
+
+ssh:
+  install-server: true
+
+users:
+  - name: mwd
+    groups: [adm, sudo]
+    shell: /bin/bash
+    sudo: "ALL=(ALL) NOPASSWD:ALL"
+    lock_passwd: false
+    # Haslo w postaci jawnej: "root"
+    plain_text_passwd: "root"
+
+chpasswd:
+  expire: false
